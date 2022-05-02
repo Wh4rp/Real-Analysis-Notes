@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.1. Metric Space &#8212; Notes of Real Analysis</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Sequence of Function" href="../Sequence-of-Function/Sequence-of-Function.html" />
+    <link rel="prev" title="1. Basic Topology" href="Basic-Topology.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Notes of Real Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Notes of Real Analysis
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Basic-Topology.html">
+   1. Basic Topology
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.1. Metric Space
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Sequence-of-Function/Sequence-of-Function.html">
+   2. Sequence of Function
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Topology/Metric-Space.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Wh4rp/Real-Analysis-Notes"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Wh4rp/Real-Analysis-Notes/issues/new?title=Issue%20on%20page%20%2FTopology/Metric-Space.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#varous-definitions">
+   1.1.1. Varous definitions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Metric Space</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#varous-definitions">
+   1.1.1. Varous definitions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="metric-space">
+<h1><span class="section-number">1.1. </span>Metric Space<a class="headerlink" href="#metric-space" title="Permalink to this headline">¶</a></h1>
+<div class="proof definition admonition" id="metric-space">
+<p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Metric Space)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a set nonempty. A function <span class="math notranslate nohighlight">\(\rho : X \times X \to \mathbb{R}\)</span> is a <em>distance function</em> if and only if <span class="math notranslate nohighlight">\(\forall x, y, z \in X\)</span> such that:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(x, y) \geq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x, y) = 0 \Leftrightarrow x = y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x, y) = f(y, x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x, y) \leq f(x, z) + f(z, y)\)</span></p></li>
+</ol>
+<p>In that case a <span class="math notranslate nohighlight">\((X, \rho)\)</span> we called <em><strong>metric space</strong></em>.</p>
+</div>
+</div><div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 1.1 </span></p>
+<div class="example-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(X = \mathbb{R}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x = (x_1, x_2)\)</span>, <span class="math notranslate nohighlight">\(y = (y_1, y_2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(d(x, y) = \sqrt{(x_1 - y_1)^2 + (x_2 - y_2)^2}\)</span></p>
+<p><span class="math notranslate nohighlight">\((\mathbb{R}, d)\)</span> is a <em>m.e.</em></p>
+</div>
+</div><div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 1.2 </span></p>
+<div class="example-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(X = \mathbb{R}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x = (x_1, x_2)\)</span>, <span class="math notranslate nohighlight">\(y = (y_1, y_2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(d_{\infty}(x, y) = \max \{|x_1 - y_1|, |x_2 - y_2| \}\)</span></p>
+<p><span class="math notranslate nohighlight">\((\mathbb{R}, d_{\infty})\)</span> is a <em>m.e.</em></p>
+</div>
+</div><div class="proof example admonition" id="example-3">
+<p class="admonition-title"><span class="caption-number">Example 1.3 </span></p>
+<div class="example-content section" id="proof-content">
+<p><span class="math notranslate nohighlight">\(X = \{ f:[0,1] \to \mathbb{R}\ | \ f \text{ is continuous}\}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x = (x_1, x_2)\)</span>, <span class="math notranslate nohighlight">\(y = (y_1, y_2)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\rho(f, g) = \int_0^1 |f(x) - g(x)| dx\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma(f, g) = \max \{ |f(x) - g(x)|, \ x \in [0, 1] \}\)</span></p>
+</div>
+</div><div class="section" id="varous-definitions">
+<h2><span class="section-number">1.1.1. </span>Varous definitions<a class="headerlink" href="#varous-definitions" title="Permalink to this headline">¶</a></h2>
+<div class="proof definition admonition" id="neighbourhood">
+<p class="admonition-title"><span class="caption-number">Definition 1.2 </span> (Neighbourhood)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space and <span class="math notranslate nohighlight">\(p \in X\)</span>. A neighborhood of <span class="math notranslate nohighlight">\(p\)</span> is a set <span class="math notranslate nohighlight">\(N_r(p)\)</span> consisting of all <span class="math notranslate nohighlight">\(q\)</span> such that <span class="math notranslate nohighlight">\(d(p, q) &lt; r\)</span>, for some <span class="math notranslate nohighlight">\(r &gt; 0\)</span>. The number <span class="math notranslate nohighlight">\(r\)</span> is called the <em>radius</em> of <span class="math notranslate nohighlight">\(N_r(p)\)</span>.</p>
+</div>
+</div><div class="proof definition admonition" id="limit-point">
+<p class="admonition-title"><span class="caption-number">Definition 1.3 </span> (Limit Point)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space and <span class="math notranslate nohighlight">\(p \in X\)</span>. A point <span class="math notranslate nohighlight">\(p\)</span> is a <em>limit point</em> of the set <span class="math notranslate nohighlight">\(E \subset X\)</span> if every neighborhood of <span class="math notranslate nohighlight">\(p\)</span> constain a point <span class="math notranslate nohighlight">\(q \neq p\)</span> such that <span class="math notranslate nohighlight">\(q \in E\)</span>.</p>
+</div>
+</div><div class="proof definition admonition" id="isolated-point">
+<p class="admonition-title"><span class="caption-number">Definition 1.4 </span> (Isolated Point)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space, <span class="math notranslate nohighlight">\(p \in X\)</span> and <span class="math notranslate nohighlight">\(E \subset X\)</span>. If <span class="math notranslate nohighlight">\(p \in E\)</span> and <span class="math notranslate nohighlight">\(p\)</span> is not limit point of <span class="math notranslate nohighlight">\(E\)</span>, then <span class="math notranslate nohighlight">\(p\)</span> is called an <em>isolated point</em>.</p>
+</div>
+</div><div class="proof definition admonition" id="closed">
+<p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Closed)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space and <span class="math notranslate nohighlight">\(E \subset X\)</span>. <span class="math notranslate nohighlight">\(E\)</span> is <em>closed</em> if every limit point of <span class="math notranslate nohighlight">\(E\)</span> is a point of <span class="math notranslate nohighlight">\(E\)</span>.</p>
+</div>
+</div><div class="proof definition admonition" id="interior-point">
+<p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Interior (point))</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space, <span class="math notranslate nohighlight">\(p \in X\)</span> and <span class="math notranslate nohighlight">\(E \subset X\)</span>. A point <span class="math notranslate nohighlight">\(p\)</span> is an <em>interior point</em> of <span class="math notranslate nohighlight">\(E\)</span> if there is a neighborhood <span class="math notranslate nohighlight">\(N\)</span> of <span class="math notranslate nohighlight">\(p\)</span> such that <span class="math notranslate nohighlight">\(N \subset E\)</span>.</p>
+</div>
+</div><div class="proof definition admonition" id="open">
+<p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Open)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space and <span class="math notranslate nohighlight">\(E \subset X\)</span>. <span class="math notranslate nohighlight">\(E\)</span> is <em>open</em> if every point of <span class="math notranslate nohighlight">\(E\)</span> is an interior point of <span class="math notranslate nohighlight">\(E\)</span>.</p>
+</div>
+</div><div class="proof definition admonition" id="bounded">
+<p class="admonition-title"><span class="caption-number">Definition 1.8 </span> (Bounded)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space, <span class="math notranslate nohighlight">\(p, q \in X\)</span> and <span class="math notranslate nohighlight">\(E \subset X\)</span>. <span class="math notranslate nohighlight">\(E\)</span> is <em>bounded</em> if there is a real number <span class="math notranslate nohighlight">\(M\)</span> and a point <span class="math notranslate nohighlight">\(p \in X\)</span> such that <span class="math notranslate nohighlight">\(d(p, q) &lt; M\)</span> for all <span class="math notranslate nohighlight">\(p \in E\)</span>.</p>
+</div>
+</div><div class="proof definition admonition" id="dense">
+<p class="admonition-title"><span class="caption-number">Definition 1.9 </span> (Dense)</p>
+<div class="definition-content section" id="proof-content">
+<p>Let be <span class="math notranslate nohighlight">\(X\)</span> a metric space and <span class="math notranslate nohighlight">\(E \subset X\)</span>. <span class="math notranslate nohighlight">\(E\)</span> is <em>dense</em> in <span class="math notranslate nohighlight">\(X\)</span> if every point of <span class="math notranslate nohighlight">\(X\)</span> is limit point of <span class="math notranslate nohighlight">\(E\)</span>, or a point of <span class="math notranslate nohighlight">\(E\)</span> (or both).</p>
+</div>
+</div><div class="proof theorem admonition" id="theorem-12">
+<p class="admonition-title"><span class="caption-number">Theorem 1.1 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Every neighborhood is an open set.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Proof</p>
+<p>Consider a neighborhood <span class="math notranslate nohighlight">\(E=N_{p}(p)\)</span>, and let <span class="math notranslate nohighlight">\(q\)</span> be any point of <span class="math notranslate nohighlight">\(E\)</span>. Then there is a positive real number <span class="math notranslate nohighlight">\(h\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+d(p, q)=r-h .
+\]</div>
+<p>For all points <span class="math notranslate nohighlight">\(s\)</span> such that <span class="math notranslate nohighlight">\(d(q, s)&lt;h\)</span>, we have then</p>
+<div class="math notranslate nohighlight">
+\[
+d(p, s) \leq d(p, q)+d(q, s)&lt;r-h+h=r,
+\]</div>
+<p>so that <span class="math notranslate nohighlight">\(s \in E\)</span>. Thus <span class="math notranslate nohighlight">\(q\)</span> is an interior point of <span class="math notranslate nohighlight">\(E\)</span>.</p>
+</div>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Topology"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Basic-Topology.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Basic Topology</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Sequence-of-Function/Sequence-of-Function.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Sequence of Function</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matías Fernández<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -6,6 +6,7 @@ root: intro
 options:
   numbered: True
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: Topology/Basic-Topology
+  sections:
+  - file: Topology/Metric-Space
+- file: Sequence-of-Function/Sequence-of-Function

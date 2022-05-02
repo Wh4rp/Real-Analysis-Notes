@@ -1,15 +1,15 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Template Book
-author: The Jupyter Book Community
+title: Notes of Real Analysis
+author: Matías Fernández
 logo: logo.png
 
 copyright: "2022"
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Wh4rp/AbstractaHechaBien  # Online location of your book
+  url: https://github.com/Wh4rp/Real-Analysis-Notes  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
@@ -27,7 +27,7 @@ sphinx:
     - sphinx_proof
     - sphinx_jupyterbook_latex
   config:
-    language: es
+    language: en
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Define the name of the latex output file for PDF builds
